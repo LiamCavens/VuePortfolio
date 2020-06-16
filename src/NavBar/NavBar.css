@@ -1,0 +1,32 @@
+#nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222;
+  height: 45px;
+}
+
+#nav-bar li {
+  float: right;
+  padding-right: 2%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Raleway", cursive;
+}
+
+.home-button {
+  float: left !important;
+  padding-left: 2%;
+}
+
+#nav-bar li:hover {
+  background-color: #444;
+  color: dodgerblue;
+  transition: 0.1s all cubic-bezier(0.5, 0.22, 0.74, 0.76);
+}
