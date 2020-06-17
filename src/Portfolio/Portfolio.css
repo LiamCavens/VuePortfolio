@@ -1,0 +1,30 @@
+.title {
+    text-align: center;
+    margin: 0;
+    color: #222;
+    font-family: "Bungee", cursive;
+    text-shadow: -1px -1px 0 dodgerblue, 1px -1px 0 dodgerblue,
+    -1px 1px 0 dodgerblue, 1px 1px 0 dodgerblue;
+}
+
+.portfolio {
+    margin: 0;
+    background-color: #777;
+}
+
+.portfolio-statement {
+    width: 70%;
+    margin: 2% 15% 4%;
+    padding: 0 0 4%;
+    font-family: "Raleway", cursive;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 4%;
+}
+
+.github-link {
+    color: #333;
+    text-decoration: underline;
+    text-decoration-color: dodgerblue;
+}
+    
