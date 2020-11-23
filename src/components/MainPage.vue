@@ -1,7 +1,14 @@
 <template>
   <div id="fireworks">
-    <h1 class="bungee">Liam Cavens</h1>
-    <Firework />
+    <h1
+      class="bungee"
+      :style="{
+        'text-shadow': `-1px -1px 0 ${color}, 1px -1px 0 ${color}, -1px 1px 0 ${color}, 1px 1px 0 ${color}`,
+      }"
+    >
+      Liam Cavens
+    </h1>
+    <Firework @firework="changeColor" />
   </div>
 </template>
 
@@ -14,7 +21,15 @@ export default {
   },
   props: {},
   data() {
-    return {};
+    return {
+      color: "dodgerblue",
+    };
+  },
+  methods: {
+    changeColor(color) {
+      this.$emit("themeChange", color);
+      this.color = `hsla(${color})`;
+    },
   },
 };
 </script>
@@ -27,6 +42,9 @@ export default {
 }
 
 .bungee {
-    font-family: 'Bungee';
+  user-select: none;
+  font-size: 100px;
+  font-family: "Bungee";
+  color: #fff;
 }
 </style>

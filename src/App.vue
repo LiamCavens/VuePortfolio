@@ -1,29 +1,46 @@
 <template>
   <div id="app">
-    <Header />
-    <MainPage />
+    <Header :themeColor="themeColor" />
+    <MainPage @themeChange="changeTheme" v-if="mode === 'main'" />
+    <Footer :themeColor="themeColor" />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header"
-import MainPage from "./components/MainPage"
+import Header from "./components/Header";
+import MainPage from "./components/MainPage";
+import Footer from "./components/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-      Header,
-      MainPage
-  }
-}
+    Header,
+    MainPage,
+    Footer
+  },
+  data() {
+    return {
+      mode: "main",
+      themeColor: "dodgerblue",
+    };
+  },
+  methods: {
+    changeTheme(color) {
+      console.log(color);
+      this.themeColor = `hsla(${color})`;
+    },
+  },
+};
 </script>
 
 <style>
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 #app {
+    display: flex;
+    flex-direction: column;
   font-family: Raleway;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
