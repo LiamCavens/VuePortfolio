@@ -38,6 +38,7 @@ export default {
 #fireworks {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex: 1;
 }
 
