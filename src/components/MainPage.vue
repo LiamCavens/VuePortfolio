@@ -3,7 +3,7 @@
     <h1
       class="bungee"
       :style="{
-        'text-shadow': `-1px -1px 0 ${color}, 1px -1px 0 ${color}, -1px 1px 0 ${color}, 1px 1px 0 ${color}`,
+        'text-shadow': `-1px -1px 0 ${color}, 1px -1px 0 ${color}, -1px 1px 0 ${color}, 1px 1px 0 ${color}`
       }"
     >
       Liam Cavens
@@ -47,6 +47,7 @@ export default {
   font-family: "Bungee";
   color: #fff;
 }
+
 @media screen and (max-width: 450px) {
     .bungee {
         font-size: 60px;

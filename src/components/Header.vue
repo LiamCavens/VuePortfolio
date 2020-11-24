@@ -86,6 +86,8 @@ export default {
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease-in-out 0s;
+  font-weight: 600;
+
 }
 
 .link::before {
