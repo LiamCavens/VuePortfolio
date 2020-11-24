@@ -28,7 +28,7 @@ export default {
   name: "Footer",
   components: {},
   props: {
-    themeColor: String,
+    themeColor: Object,
   },
   data() {
     return {};

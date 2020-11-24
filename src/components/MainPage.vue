@@ -47,4 +47,9 @@ export default {
   font-family: "Bungee";
   color: #fff;
 }
+@media screen and (max-width: 450px) {
+    .bungee {
+        font-size: 60px;
+    }
+}
 </style>

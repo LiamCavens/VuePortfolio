@@ -6,7 +6,7 @@
       alt="LCImage"
     />
     <div class="header-titles" :style="styleTheme">
-      <h2>Liam Cavens</h2>
+      <h2 :style="{'text-decoration-color': themeColor}">Liam Cavens</h2>
       <p>Software developer</p>
     </div>
     <div class="header-links">
@@ -26,7 +26,7 @@ export default {
   name: "Header",
   components: {},
   props: {
-    themeColor: String,
+    themeColor: Object,
   },
   data() {
     return {
@@ -71,6 +71,10 @@ export default {
 
 .header-links {
   margin-left: auto;
+}
+
+.header-titles h2 {
+    text-decoration: underline;
 }
 
 .header-titles h2,

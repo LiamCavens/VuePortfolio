@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <Header :themeColor="themeColor" />
-    <MainPage @themeChange="changeTheme" v-if="mode === 'main'" />
+    <MainPage
+      :themeColor="themeColor"
+      @themeChange="changeTheme"
+      v-if="mode === 'main'"
+    />
     <Footer :themeColor="themeColor" />
   </div>
 </template>
@@ -16,7 +20,7 @@ export default {
   components: {
     Header,
     MainPage,
-    Footer
+    Footer,
   },
   data() {
     return {
@@ -39,8 +43,8 @@ body {
   margin: 0;
 }
 #app {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   font-family: Raleway;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
