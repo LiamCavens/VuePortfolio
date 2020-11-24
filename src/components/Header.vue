@@ -26,7 +26,7 @@ export default {
   name: "Header",
   components: {},
   props: {
-    themeColor: Object,
+    themeColor: String,
   },
   data() {
     return {
@@ -37,7 +37,7 @@ export default {
   },
   watch: {
       themeColor: function(){
-          this.styleTheme['--selectColor'] = this.themeColor
+          this.styleTheme['--selectColor'] = this.themeColor;
       }
   },
 };

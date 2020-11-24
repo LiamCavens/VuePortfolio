@@ -1,5 +1,6 @@
 <template>
   <div id="footer">
+      <p>Socials | Contact</p>
     <div class="contact-icons">
       <a href="https://github.com/LiamCavens" target="_blank">
         <font-awesome-icon
@@ -28,7 +29,7 @@ export default {
   name: "Footer",
   components: {},
   props: {
-    themeColor: Object,
+    themeColor: String,
   },
   data() {
     return {};
@@ -42,11 +43,21 @@ export default {
   z-index: 10;
   height: 100px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
   color: #c7c7c7;
   background-color: #505050;
+}
+
+#footer p {
+    margin: 0;
+    font-variant: small-caps;
+}
+
+.contact-icons {
+    margin-top: 10px;
 }
 
 .contact-icons a {

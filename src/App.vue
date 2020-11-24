@@ -30,7 +30,6 @@ export default {
   },
   methods: {
     changeTheme(color) {
-      console.log(color);
       this.themeColor = `hsla(${color})`;
     },
   },
