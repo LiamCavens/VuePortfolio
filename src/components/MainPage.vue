@@ -3,7 +3,7 @@
     <h1
       class="bungee"
       :style="{
-        'text-shadow': `-1px -1px 0 ${color}, 1px -1px 0 ${color}, -1px 1px 0 ${color}, 1px 1px 0 ${color}`
+        'text-shadow': `-2px -2px 0 ${color}, 2px -2px 0 ${color}, -2px 2px 0 ${color}, 2px 2px 0 ${color}`
       }"
     >
       Liam Cavens
