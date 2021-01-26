@@ -22,7 +22,7 @@ export default {
       seedAmount: 0,
       seeds: [],
       particles: [],
-      auto: false,
+      auto: true,
     };
   },
   computed: {
@@ -76,10 +76,10 @@ export default {
             this.particles.splice(i, 1);
           }
         }
-        if (this.auto && this.seedAmount % 100 === 0) {
+        if (this.auto && this.seedAmount % 300 === 0) {
           const seed = this.Seed(
             this.randomInt(20, this.width - 20),
-            700,
+            window.innerHeight - 100,
             this.randomInt(175, 185),
             [this.randomInt(0, 359), "100%", "50%"]
           );
