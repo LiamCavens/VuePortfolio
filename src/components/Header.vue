@@ -13,7 +13,7 @@
       <a
         class="link"
         :style="{ color: themeColor }"
-        :href="`${publicPath}LiamCavensCV.odt`"
+        :href="`${publicPath}LiamCavensCV.pdf`"
         download
         >Download CV</a
       >
