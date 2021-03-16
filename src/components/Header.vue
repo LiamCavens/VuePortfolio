@@ -13,7 +13,7 @@
       <a
         class="link"
         :style="{ color: themeColor }"
-        href="../assets/LiamCavensCV.pdf"
+        :href="`${publicPath}LiamCavensCV.odt`"
         download
         >Download CV</a
       >
@@ -30,6 +30,7 @@ export default {
   },
   data() {
     return {
+        publicPath: process.env.BASE_URL,
         styleTheme: {
             '--selectColor': this.themeColor
         }
