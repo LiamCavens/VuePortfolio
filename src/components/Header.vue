@@ -4,12 +4,14 @@
       class="header-img"
       src="../assets/images/LiamCartoon.jpg"
       alt="LCImage"
+      v-on:click="modeChange('main')"
     />
-    <div class="header-titles" :style="styleTheme">
+    <div class="header-titles" :style="styleTheme" v-on:click="modeChange('main')">
       <h2 :style="{'text-decoration-color': themeColor}">Liam Cavens</h2>
       <p>Software developer</p>
     </div>
     <div class="header-links">
+        <a class="link" v-on:click="modeChange('cssPhoto')">CSS Photo Filters</a>
       <a
         class="link"
         :style="{ color: themeColor }"
@@ -35,6 +37,11 @@ export default {
             '--selectColor': this.themeColor
         }
     };
+  },
+  methods: {
+      modeChange(mode) {
+           this.$emit("modeChange", mode);
+      }
   },
   watch: {
       themeColor: function(){
@@ -63,11 +70,16 @@ export default {
   height: 80px;
   border-radius: 50%;
   margin: 10px;
+  cursor: pointer;
 }
 
 .header-titles {
   display: flex;
   flex-direction: column;
+}
+
+.header-titles > h2 {
+    cursor: pointer;
 }
 
 .header-links {
@@ -88,7 +100,8 @@ export default {
   position: relative;
   transition: all 0.3s ease-in-out 0s;
   font-weight: 600;
-
+  margin: 0 5px;
+  cursor: pointer;
 }
 
 .link::before {

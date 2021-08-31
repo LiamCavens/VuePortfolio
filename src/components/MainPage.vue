@@ -8,7 +8,7 @@
     >
       Liam Cavens
     </h1>
-    <Firework @firework="changeColor" />
+    <Firework v-if="page === 'home'" @firework="changeColor" />
   </div>
 </template>
 
@@ -19,10 +19,13 @@ export default {
   components: {
     Firework,
   },
-  props: {},
+  props: {
+      themeColor: String
+  },
   data() {
     return {
-      color: "dodgerblue",
+      color: this.themeColor,
+      page: "home"
     };
   },
   methods: {

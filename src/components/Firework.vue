@@ -22,7 +22,7 @@ export default {
       seedAmount: 0,
       seeds: [],
       particles: [],
-      auto: true,
+      auto: false,
     };
   },
   computed: {

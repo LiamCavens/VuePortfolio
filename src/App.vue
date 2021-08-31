@@ -1,10 +1,14 @@
 <template>
   <div id="app">
-    <Header :themeColor="themeColor" />
+    <Header :themeColor="themeColor" @modeChange="modeChange" />
     <MainPage
       :themeColor="themeColor"
       @themeChange="changeTheme"
       v-if="mode === 'main'"
+    />
+    <CSSPhotoFilter
+        :themeColor="themeColor"
+        v-if="mode === 'cssPhoto'"
     />
     <Footer :themeColor="themeColor" />
   </div>
@@ -13,6 +17,7 @@
 <script>
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
+import CSSPhotoFilter from "./components/CSSPhotoFilter.vue";
 import Footer from "./components/Footer";
 
 export default {
@@ -20,6 +25,7 @@ export default {
   components: {
     Header,
     MainPage,
+    CSSPhotoFilter,
     Footer,
   },
   data() {
@@ -32,6 +38,9 @@ export default {
     changeTheme(color) {
       this.themeColor = `hsla(${color})`;
     },
+    modeChange(mode) {
+        this.mode = mode;
+    }
   },
 };
 </script>
