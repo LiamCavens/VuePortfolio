@@ -6,10 +6,6 @@
       @themeChange="changeTheme"
       v-if="mode === 'main'"
     />
-    <CSSPhotoFilter
-        :themeColor="themeColor"
-        v-if="mode === 'cssPhoto'"
-    />
     <Footer :themeColor="themeColor" />
   </div>
 </template>
@@ -17,7 +13,6 @@
 <script>
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
-import CSSPhotoFilter from "./components/CSSPhotoFilter.vue";
 import Footer from "./components/Footer";
 
 export default {
@@ -25,7 +20,6 @@ export default {
   components: {
     Header,
     MainPage,
-    CSSPhotoFilter,
     Footer,
   },
   data() {
